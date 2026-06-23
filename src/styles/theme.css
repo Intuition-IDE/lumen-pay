@@ -1,0 +1,53 @@
+/*
+ * Lumen Pay — design tokens
+ * Aesthetic: "luminous ledger" — deep ink surfaces, a jade glow that reads as
+ * money/light, warm amber for in-flight states, restrained editorial type.
+ */
+:root {
+  /* surfaces */
+  --ink: #0a0c10;
+  --ink-2: #0d1016;
+  --surface: #13171f;
+  --surface-2: #181d27;
+  --surface-3: #1f2530;
+  --line: rgba(255, 255, 255, 0.06);
+  --line-2: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  /* text */
+  --text: #eaedf2;
+  --text-dim: #99a1ad;
+  --text-faint: #5b636f;
+
+  /* brand + signals */
+  --jade: #57e0a0;
+  --jade-bright: #7bf3bb;
+  --jade-soft: rgba(87, 224, 160, 0.13);
+  --jade-line: rgba(87, 224, 160, 0.32);
+  --amber: #f2b25c;
+  --amber-soft: rgba(242, 178, 92, 0.14);
+  --coral: #ff7e6e;
+  --coral-soft: rgba(255, 126, 110, 0.14);
+  --iris: #8e9bff;
+  --iris-soft: rgba(142, 155, 255, 0.14);
+
+  /* type */
+  --font-display: 'Clash Display', 'Satoshi', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Satoshi', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* radius + shadow */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 18px 40px -24px rgba(0, 0, 0, 0.8);
+  --shadow-pop: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+  --glow-jade: 0 0 0 1px var(--jade-line), 0 8px 32px -8px rgba(87, 224, 160, 0.4);
+
+  /* layout */
+  --rail-w: 248px;
+  --topbar-h: 68px;
+  --gap: 20px;
+}
