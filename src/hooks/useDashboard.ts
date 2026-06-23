@@ -7,6 +7,7 @@
  */
 import { getSeries, listPayouts, totalPayouts } from '../services/billing'
 import { getBalance, listTransactions, successRate } from '../services/ledger'
+import { flaggedCount } from '../services/risk'
 import { request } from '../api/client'
 import type { ActivityEvent } from '../types'
 import { useAsync } from './useAsync'
@@ -29,6 +30,7 @@ export function useDashboard() {
     derived: {
       successRate: successRate(txns),
       txCount: txns.length,
+      riskFlags: flaggedCount(txns),
       payoutTotal: series.data ? totalPayouts(series.data) : null,
     },
   }

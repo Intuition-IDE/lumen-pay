@@ -14,10 +14,11 @@ interface Props {
   successRate: number
   txCount: number
   pending: number
+  riskFlags: number
   delay?: number
 }
 
-export function StatCards({ successRate, txCount, pending, delay = 0 }: Props) {
+export function StatCards({ successRate, txCount, pending, riskFlags, delay = 0 }: Props) {
   const tiles: Tile[] = [
     {
       tone: 'jade',
@@ -41,11 +42,11 @@ export function StatCards({ successRate, txCount, pending, delay = 0 }: Props) {
       foot: 'awaiting capture',
     },
     {
-      tone: 'jade',
+      tone: riskFlags > 0 ? 'amber' : 'jade',
       icon: <Shield />,
       label: 'Risk flags',
-      value: '0',
-      foot: 'all clear',
+      value: String(riskFlags),
+      foot: riskFlags > 0 ? 'held for review' : 'all clear',
     },
   ]
 

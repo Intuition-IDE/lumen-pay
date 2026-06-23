@@ -7,6 +7,7 @@
  */
 import { request } from '../api/client'
 import { add } from '../lib/money'
+import { assess } from './risk'
 import type { BalanceSummary, Money, Transaction } from '../types'
 
 export async function getBalance(): Promise<BalanceSummary> {
@@ -14,7 +15,10 @@ export async function getBalance(): Promise<BalanceSummary> {
 }
 
 export async function listTransactions(): Promise<Transaction[]> {
-  return request<Transaction[]>('/transactions')
+  const txns = await request<Transaction[]>('/transactions')
+  // Risk scoring is part of the read path — every transaction is assessed
+  // before it reaches the dashboard.
+  return txns.map(assess)
 }
 
 /** Net settled position from a set of transactions (succeeded only). */

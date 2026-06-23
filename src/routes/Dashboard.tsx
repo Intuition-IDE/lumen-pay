@@ -38,6 +38,7 @@ export function Dashboard() {
               successRate={derived.successRate}
               txCount={derived.txCount}
               pending={pending}
+              riskFlags={derived.riskFlags}
               delay={80}
             />
             <PayoutChart series={series.data ?? []} loading={series.loading} />

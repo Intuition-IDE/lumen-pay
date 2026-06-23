@@ -1,8 +1,9 @@
 /** Full-width recent-transactions table. */
 import { signed } from '../lib/money'
 import { clock } from '../lib/time'
+import { isFlagged } from '../services/risk'
 import type { Transaction } from '../types'
-import { ArrowRight } from './Icons'
+import { ArrowRight, Shield } from './Icons'
 import { StatusPill } from './StatusPill'
 
 interface Props {
@@ -63,7 +64,16 @@ export function TransactionTable({ transactions, loading }: Props) {
                 </div>
               </td>
               <td style={{ color: 'var(--text-dim)' }}>{METHOD[t.method]}</td>
-              <td><StatusPill status={t.status} /></td>
+              <td>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <StatusPill status={t.status} />
+                  {isFlagged(t) && (
+                    <span className="pill failed" title={`Risk score ${t.riskScore}`}>
+                      <Shield style={{ width: 11, height: 11 }} /> Review
+                    </span>
+                  )}
+                </div>
+              </td>
               <td className="num" style={{ color: 'var(--text-dim)', fontSize: 12 }}>{clock(t.createdAt)}</td>
               <td className="r">
                 <span className={`amt ${t.direction === 'inbound' ? 'pos' : 'neg'}`}>

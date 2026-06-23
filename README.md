@@ -55,6 +55,7 @@ end and only formatted at the edge in `lib/money`.
 
 ## Status
 
-`v1.4.0` — Overview dashboard, auth, ledger reads, payouts, webhooks.
-Fraud/risk scoring is stubbed (`Transaction.riskScore`) and not yet wired into a
-critical path.
+`v1.5.0` — Overview dashboard, auth, ledger reads, payouts, webhooks, and
+**real-time fraud scoring** (`services/risk`) wired onto the ledger read path:
+every transaction is assessed on read, flagged rows are held for review, and the
+dashboard surfaces the live risk count.
