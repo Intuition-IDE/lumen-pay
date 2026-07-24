@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "generator": "intuition-ide@1.126.7",
+  "generatedAt": "2026-07-24T05:12:08.258Z",
+  "commit": "e288140",
+  "course": {
+    "id": "learn:lumen-pay",
+    "title": "learn lumen-pay",
+    "repo": "lumen-pay",
+    "langsLabel": "typescript · react"
+  },
+  "phases": [
+    {
+      "id": "languages",
+      "title": "languages & frameworks",
+      "lessons": [
+        "01-languages-frameworks/01-typescript-types-functions.md",
+        "01-languages-frameworks/02-react-components-props.md"
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "the architecture",
+      "lessons": [
+        "02-the-architecture/01-the-map-of-this-codebase.md",
+        "02-the-architecture/02-src-how-it-fits.md",
+        "02-the-architecture/03-src-api-how-it-fits.md",
+        "02-the-architecture/04-src-components-how-it-fits.md",
+        "02-the-architecture/05-src-data-how-it-fits.md",
+        "02-the-architecture/06-src-hooks-how-it-fits.md",
+        "02-the-architecture/07-src-lib-how-it-fits.md",
+        "02-the-architecture/08-src-routes-how-it-fits.md",
+        "02-the-architecture/09-src-services-how-it-fits.md"
+      ]
+    },
+    {
+      "id": "granular",
+      "title": "how it really works",
+      "lessons": []
+    }
+  ],
+  "quizzes": []
+}
