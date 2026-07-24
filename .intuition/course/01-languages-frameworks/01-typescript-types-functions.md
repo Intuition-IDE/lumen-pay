@@ -17,17 +17,11 @@ This is why big codebases like this one use it: with hundreds of files, the type
 
 The part after the colon (`: string`, `: number`, `: boolean`) is the type — the kind of value.
 
-```
+```typescript
 const title: string = "Lumen Pay";
 const balance: number = 4200;
 const isOpen: boolean = true;
 ```
-
-**check yourself:** What does a "type" describe in TypeScript?
-- The KIND of a value (text, number, yes/no, list, …)
-- The colour of the text in the editor
-- How fast the program runs
-*answer: The KIND of a value (text, number, yes/no, list, …)* — A type is the kind of value; the checker uses it to catch mistakes as you type.
 
 ## Values, names, and const vs let
 
@@ -39,17 +33,11 @@ The three most common basic types are `string` (text, always in quotes), `number
 
 Each `const NAME = VALUE` gives a value a permanent name.
 
-```
+```typescript
 const currency = "USD";
 let attempts = 0;
 attempts = attempts + 1;
 ```
-
-**check yourself:** You have a value that must never change once set. Which do you use?
-- either — there is no difference
-- let
-- const
-*answer: const* — `const` locks the name to one value; `let` allows reassignment.
 
 ## Functions — reusable instructions
 
@@ -61,19 +49,13 @@ You will also see the shorter "arrow" form, `const total = (price: number, tax: 
 
 Find the inputs in the parentheses and the work in the body; the type after the `)` is what it returns.
 
-```
+```typescript
 function total(price: number, tax: number): number {
 	return price + tax;
 }
 
 const double = (n: number): number => n * 2;
 ```
-
-**check yourself:** What are the values inside a function call’s parentheses?
-- Its inputs (arguments)
-- Comments the computer ignores
-- The function’s name
-*answer: Its inputs (arguments)* — The parentheses hold the inputs the function works on.
 
 ## Objects and interfaces — describing a shape
 
@@ -85,19 +67,13 @@ Interfaces are the backbone of a typed codebase: they are the shared vocabulary.
 
 Each line inside the braces is a field: `name: type`. This is the shape the code agrees on.
 
-```
+```typescript
 interface Payment {
 	amount: number;
 	currency: string;
 	status: string;
 }
 ```
-
-**check yourself:** What does an `interface` define?
-- A colour theme for the app
-- The shape (fields and their types) an object must have
-- How many times a loop runs
-*answer: The shape (fields and their types) an object must have* — An interface is a named, reusable description of an object’s fields and their types.
 
 ## Lists and the angle brackets
 
@@ -109,16 +85,10 @@ When you see a list, the next thing to look for is the code that walks through i
 
 Spot the `[]` or `<…>` — that is a collection — and any `.map`/`.filter` walking it.
 
-```
+```typescript
 const amounts: number[] = payments.map(p => p.amount);
 const settled = payments.filter(p => p.status === "settled");
 ```
-
-**check yourself:** What does `Payment[]` mean?
-- A single Payment that is broken
-- A Payment shown in a table
-- A list of Payment values
-*answer: A list of Payment values* — `[]` after a type means "a list of those".
 
 ## Missing values: optional, union, and null
 
@@ -130,19 +100,13 @@ The special values `null` and `undefined` mean "nothing here". When a value coul
 
 A `?` marks an optional field; a `|` lists the allowed alternatives.
 
-```
+```typescript
 interface User {
 	name: string;
 	middleName?: string;
 	role: "admin" | "member";
 }
 ```
-
-**check yourself:** What does `role: "admin" | "member"` allow?
-- Exactly one of the two listed words
-- Both words at the same time
-- Any text at all
-*answer: Exactly one of the two listed words* — A union with `|` restricts the value to exactly one of the listed options.
 
 ## Waiting for things: async and await
 
@@ -154,18 +118,12 @@ When you see `async` and `await`, read the code top to bottom as normal — the 
 
 `async` marks a function that waits; each `await` is a point where it pauses for a result.
 
-```
+```typescript
 async function loadBalance(id: string): Promise<number> {
 	const account = await fetchAccount(id);
 	return account.balance;
 }
 ```
-
-**check yourself:** What is a `Promise<number>`?
-- A promise never to change the number
-- A number that is not ready yet but will be
-- A number that is always exactly 100
-*answer: A number that is not ready yet but will be* — A Promise is a result that arrives later; the `<number>` says what it will be.
 
 ## Files that share: import and export
 
@@ -177,15 +135,9 @@ A path starting with `./` or `../` points at another file in this project; a bar
 
 Imports at the top say what this file needs; exports say what it offers others.
 
-```
+```typescript
 import { formatMoney } from "./money";
 import { useState } from "react";
 
 export function Balance() { /* … */ }
 ```
-
-**check yourself:** A file has `import { x } from "./utils"`. Where does `x` come from?
-- The internet, at runtime
-- Another file in this same project
-- An installed outside library
-*answer: Another file in this same project* — A `./` path points at a file within the project; a bare name points at an installed library.

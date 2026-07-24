@@ -1,7 +1,7 @@
 {
   "version": 2,
   "generator": "intuition-ide@1.126.7",
-  "generatedAt": "2026-07-24T05:40:37.250Z",
+  "generatedAt": "2026-07-24T06:30:34.082Z",
   "commit": "e288140",
   "course": {
     "id": "learn:lumen-pay",
@@ -34,5 +34,180 @@
       ]
     }
   ],
-  "quizzes": []
+  "quizzes": [
+    {
+      "id": "q-lang:typescript",
+      "title": "typescript — types & functions · check yourself",
+      "attachedTo": "lang:typescript",
+      "questions": [
+        {
+          "id": "q-lang:typescript:q1",
+          "prompt": "What does a \"type\" describe in TypeScript?",
+          "choices": [
+            "How fast the program runs",
+            "The KIND of a value (text, number, yes/no, list, …)",
+            "The colour of the text in the editor"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "q-lang:typescript:q2",
+          "prompt": "You have a value that must never change once set. Which do you use?",
+          "choices": [
+            "const",
+            "either — there is no difference",
+            "let"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "q-lang:typescript:q3",
+          "prompt": "What are the values inside a function call’s parentheses?",
+          "choices": [
+            "Comments the computer ignores",
+            "Its inputs (arguments)",
+            "The function’s name"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "q-lang:typescript:q4",
+          "prompt": "What does an `interface` define?",
+          "choices": [
+            "A colour theme for the app",
+            "How many times a loop runs",
+            "The shape (fields and their types) an object must have"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "q-lang:typescript:q5",
+          "prompt": "What does `Payment[]` mean?",
+          "choices": [
+            "A Payment shown in a table",
+            "A list of Payment values",
+            "A single Payment that is broken"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "q-lang:typescript:q6",
+          "prompt": "What does `role: \"admin\" | \"member\"` allow?",
+          "choices": [
+            "Any text at all",
+            "Both words at the same time",
+            "Exactly one of the two listed words"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "q-lang:typescript:q7",
+          "prompt": "What is a `Promise<number>`?",
+          "choices": [
+            "A number that is always exactly 100",
+            "A number that is not ready yet but will be",
+            "A promise never to change the number"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "q-lang:typescript:q8",
+          "prompt": "A file has `import { x } from \"./utils\"`. Where does `x` come from?",
+          "choices": [
+            "An installed outside library",
+            "Another file in this same project",
+            "The internet, at runtime"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "q-fw:react",
+      "title": "react — components & props · check yourself",
+      "attachedTo": "fw:react",
+      "questions": [
+        {
+          "id": "q-fw:react:q1",
+          "prompt": "What is React mainly used for?",
+          "choices": [
+            "Building the parts of an app people see and interact with",
+            "Drawing 3D video game graphics only",
+            "Storing files on a hard drive"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "q-fw:react:q2",
+          "prompt": "How can you often spot a React component name?",
+          "choices": [
+            "It always starts with a number",
+            "It is always inside quotes",
+            "It usually starts with a capital letter"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "q-fw:react:q3",
+          "prompt": "In JSX, what do curly braces `{}` usually mean?",
+          "choices": [
+            "Insert or run JavaScript here",
+            "Make text bold",
+            "Start a comment"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "q-fw:react:q4",
+          "prompt": "What are props in React?",
+          "choices": [
+            "A special kind of file on disk",
+            "Only the colors a component can use",
+            "Values passed into a component from outside"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "q-fw:react:q5",
+          "prompt": "What usually happens after React state changes?",
+          "choices": [
+            "All components stop working until refresh",
+            "React updates the component's UI to match the new data",
+            "The file is deleted"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "id": "q-fw:react:q6",
+          "prompt": "What does `.map(...)` often mean in React UI code?",
+          "choices": [
+            "Create one piece of UI for each item in a list",
+            "Pause the program for a second",
+            "Rename a component file"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "id": "q-fw:react:q7",
+          "prompt": "What is `useEffect` commonly used for?",
+          "choices": [
+            "Creating folders in the project",
+            "Defining CSS colors only",
+            "Running side work like fetching data or setting timers"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "id": "q-fw:react:q8",
+          "prompt": "What does `import` do in a React file?",
+          "choices": [
+            "Brings in code from another file or library to use here",
+            "Deletes old components",
+            "Runs the whole app immediately"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    }
+  ]
 }

@@ -17,19 +17,13 @@ That is why React appears all through a codebase. It gives a consistent way to b
 
 This import line shows the file is using React tools.
 
-```
+```react
 import React from "react";
 
 export function App() {
   return <h1>Hello</h1>;
 }
 ```
-
-**check yourself:** What is React mainly used for?
-- Drawing 3D video game graphics only
-- Building the parts of an app people see and interact with
-- Storing files on a hard drive
-*answer: Building the parts of an app people see and interact with* — React is mainly for building user interfaces.
 
 ## Components: the basic building blocks
 
@@ -41,17 +35,11 @@ When reading a file, look for a function or `const` with a capitalized name, the
 
 A capitalized function like this is usually a React component.
 
-```
+```react
 export function Profile() {
   return <div>Profile page</div>;
 }
 ```
-
-**check yourself:** How can you often spot a React component name?
-- It usually starts with a capital letter
-- It always starts with a number
-- It is always inside quotes
-*answer: It usually starts with a capital letter* — React components are usually named with an initial capital letter.
 
 ## JSX: HTML-like code inside JavaScript
 
@@ -63,7 +51,7 @@ Inside JSX, curly braces `{}` mean "switch back into JavaScript here." That is h
 
 After `return (`, you will often see JSX that describes the UI.
 
-```
+```react
 function Welcome() {
   const name = "Maya";
   return (
@@ -71,12 +59,6 @@ function Welcome() {
   );
 }
 ```
-
-**check yourself:** In JSX, what do curly braces `{}` usually mean?
-- Start a comment
-- Make text bold
-- Insert or run JavaScript here
-*answer: Insert or run JavaScript here* — Curly braces inside JSX switch into normal JavaScript.
 
 ## Props: data passed into a component
 
@@ -88,19 +70,13 @@ Props are read-only in normal React style. Read-only means the receiving compone
 
 A custom component with attributes like this is receiving props.
 
-```
+```react
 function Button(props) {
   return <button>{props.label}</button>;
 }
 
 <Button label="Save" />
 ```
-
-**check yourself:** What are props in React?
-- Only the colors a component can use
-- A special kind of file on disk
-- Values passed into a component from outside
-*answer: Values passed into a component from outside* — Props are the input values a component receives.
 
 ## State and events: when the screen changes
 
@@ -112,7 +88,7 @@ A common pattern is: an event happens, a handler updates state, and the UI chang
 
 These lines often show user actions causing state changes.
 
-```
+```react
 import { useState } from "react";
 
 function Counter() {
@@ -120,12 +96,6 @@ function Counter() {
   return <button onClick={() => setCount(count + 1)}>{count}</button>;
 }
 ```
-
-**check yourself:** What usually happens after React state changes?
-- The file is deleted
-- React updates the component's UI to match the new data
-- All components stop working until refresh
-*answer: React updates the component's UI to match the new data* — React re-renders so the screen matches the latest state.
 
 ## Showing things conditionally and rendering lists
 
@@ -137,7 +107,7 @@ When reading list code, notice the `key` prop. A key is a stable label React use
 
 A `.map(...)` call inside JSX usually means the UI is being repeated for a list of data.
 
-```
+```react
 const items = ["Tea", "Coffee"];
 
 <ul>
@@ -146,12 +116,6 @@ const items = ["Tea", "Coffee"];
   ))}
 </ul>
 ```
-
-**check yourself:** What does `.map(...)` often mean in React UI code?
-- Create one piece of UI for each item in a list
-- Rename a component file
-- Pause the program for a second
-*answer: Create one piece of UI for each item in a list* — In React, `.map(...)` is commonly used to render repeated items from a list.
 
 ## Hooks and `useEffect`: extra React tools inside components
 
@@ -163,7 +127,7 @@ For reading code, the big idea is simple: components describe UI, while effects 
 
 `useEffect` usually marks code that runs after rendering or when watched values change.
 
-```
+```react
 import { useEffect } from "react";
 
 function Page() {
@@ -175,12 +139,6 @@ function Page() {
 }
 ```
 
-**check yourself:** What is `useEffect` commonly used for?
-- Creating folders in the project
-- Defining CSS colors only
-- Running side work like fetching data or setting timers
-*answer: Running side work like fetching data or setting timers* — `useEffect` is for work tied to rendering, such as data fetching or timers.
-
 ## Imports, exports, and the component tree
 
 React codebases are split across many files. `import` means "bring in something from another file or library so I can use it here." `export` means "make this thing available to other files." Reading imports at the top of a file is one of the fastest ways to understand what that file depends on.
@@ -191,7 +149,7 @@ When trying to understand a real codebase, follow the tree one step at a time. S
 
 Import lines show which components or tools this file uses.
 
-```
+```react
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
 
@@ -199,9 +157,3 @@ export function App() {
   return <Header />;
 }
 ```
-
-**check yourself:** What does `import` do in a React file?
-- Runs the whole app immediately
-- Brings in code from another file or library to use here
-- Deletes old components
-*answer: Brings in code from another file or library to use here* — `import` lets a file use code defined elsewhere.
