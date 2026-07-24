@@ -1,7 +1,7 @@
 {
   "version": 2,
   "generator": "intuition-ide@1.126.7",
-  "generatedAt": "2026-07-24T05:12:08.258Z",
+  "generatedAt": "2026-07-24T05:40:37.250Z",
   "commit": "e288140",
   "course": {
     "id": "learn:lumen-pay",
@@ -32,11 +32,6 @@
         "02-the-architecture/08-src-routes-how-it-fits.md",
         "02-the-architecture/09-src-services-how-it-fits.md"
       ]
-    },
-    {
-      "id": "granular",
-      "title": "how it really works",
-      "lessons": []
     }
   ],
   "quizzes": []

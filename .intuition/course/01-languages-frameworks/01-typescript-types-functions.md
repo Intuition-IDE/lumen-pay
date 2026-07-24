@@ -24,8 +24,8 @@ const isOpen: boolean = true;
 ```
 
 **check yourself:** What does a "type" describe in TypeScript?
-- The colour of the text in the editor
 - The KIND of a value (text, number, yes/no, list, …)
+- The colour of the text in the editor
 - How fast the program runs
 *answer: The KIND of a value (text, number, yes/no, list, …)* — A type is the kind of value; the checker uses it to catch mistakes as you type.
 
@@ -46,9 +46,9 @@ attempts = attempts + 1;
 ```
 
 **check yourself:** You have a value that must never change once set. Which do you use?
+- either — there is no difference
 - let
 - const
-- either — there is no difference
 *answer: const* — `const` locks the name to one value; `let` allows reassignment.
 
 ## Functions — reusable instructions
@@ -70,9 +70,9 @@ const double = (n: number): number => n * 2;
 ```
 
 **check yourself:** What are the values inside a function call’s parentheses?
-- The function’s name
 - Its inputs (arguments)
 - Comments the computer ignores
+- The function’s name
 *answer: Its inputs (arguments)* — The parentheses hold the inputs the function works on.
 
 ## Objects and interfaces — describing a shape
@@ -94,8 +94,8 @@ interface Payment {
 ```
 
 **check yourself:** What does an `interface` define?
-- The shape (fields and their types) an object must have
 - A colour theme for the app
+- The shape (fields and their types) an object must have
 - How many times a loop runs
 *answer: The shape (fields and their types) an object must have* — An interface is a named, reusable description of an object’s fields and their types.
 
@@ -139,9 +139,9 @@ interface User {
 ```
 
 **check yourself:** What does `role: "admin" | "member"` allow?
-- Any text at all
-- Both words at the same time
 - Exactly one of the two listed words
+- Both words at the same time
+- Any text at all
 *answer: Exactly one of the two listed words* — A union with `|` restricts the value to exactly one of the listed options.
 
 ## Waiting for things: async and await
@@ -186,6 +186,6 @@ export function Balance() { /* … */ }
 
 **check yourself:** A file has `import { x } from "./utils"`. Where does `x` come from?
 - The internet, at runtime
-- An installed outside library
 - Another file in this same project
+- An installed outside library
 *answer: Another file in this same project* — A `./` path points at a file within the project; a bare name points at an installed library.
